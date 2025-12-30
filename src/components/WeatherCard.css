@@ -1,0 +1,23 @@
+.weather-card {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  border-radius: 10px;
+  display: inline-block;
+  min-width: 250px;
+  margin-top: 20px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+.weather-card img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 10px;
+}
+
+.weather-card h2 {
+  margin: 0 0 10px 0;
+}
+
+.weather-card p {
+  margin: 5px 0;
+}

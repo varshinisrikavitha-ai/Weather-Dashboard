@@ -1,0 +1,69 @@
+.clouds, .rain, .snow, .thunderstorm {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* Clouds */
+.cloud {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  height: 60px;
+  width: 200px;
+  animation: moveCloud linear infinite;
+}
+
+@keyframes moveCloud {
+  0% { transform: translateX(-250px); }
+  100% { transform: translateX(150vw); }
+}
+
+/* Rain */
+.raindrop {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.7);
+  animation: fall linear infinite;
+  top: -20px;
+}
+
+@keyframes fall {
+  0% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(100vh); opacity: 0; }
+}
+
+/* Snow */
+.snowflake {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  top: -10px;
+  animation: snowFall linear infinite;
+}
+
+@keyframes snowFall {
+  0% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(100vh); opacity: 0.5; }
+}
+
+/* Thunderstorm */
+.lightning {
+  position: absolute;
+  top: 50px;
+  width: 4px;
+  height: 100px;
+  background: yellow;
+  opacity: 0;
+  animation: lightningFlash 2s infinite;
+  left: 50%;
+}
+
+@keyframes lightningFlash {
+  0%, 90%, 100% { opacity: 0; }
+  95% { opacity: 1; }
+}
